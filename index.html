@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalás</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main{
+        
+        width: 600px;
+        background-color: rgb(219, 219, 219);
+    }
+
+    #mainspace{
+        margin: 100px;
+    }
+
+    .mezonev{
+        display: inline;
+        margin-right: 50px ;
+    }
+</style>
+<body>
+    <h1>Panzió Foglalás</h1>
+
+    <div id="main">
+        <div id="mainspace">
+        <form action="index.html">
+            <hr>
+            <p class="mezosor">
+                <p class="mezonev">Érkezés dátuma:</p>
+                <input type="date" name="erk" id="erkezes">
+            </p>
+            <p class="mezosor">
+                <p class="mezonev">Távozás dátuma:</p>
+                <input type="date" name="tav" id="tavozas">
+            </p>
+
+            <hr>
+
+            <p class="mezosor">
+                <p class="mezonev">Szoba típusa: </p>              
+                <input type="radio" name="egyagy" id="egyagyas">
+                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                <input type="radio" name="ketagy1" id="ketagyas1">
+                <label for="ketagy1">Egyágyas - 9000Ft/éj</label>
+            </p>
+
+
+        </form>
+    </div>
+    </div>
+
+
+    <script src="./foglalas.js"></script>
+</body>
+</html>
