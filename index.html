@@ -18,13 +18,39 @@
     }
 
     #mainspace{
-        margin: 100px;
+        margin: 10px;
+        margin-left: 10vh;
+        margin-right: 10vh;
     }
 
-    .mezonev{
-        display: inline;
-        margin-right: 50px ;
+
+    .mezok{
+        margin-left: auto;
     }
+
+
+    .mezosor{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .radiok{
+        display: block;
+    }
+    label{
+        display: inline;
+    }
+
+    .vendegkor{
+        width: 3vh;
+    }
+
+    #kivansag{
+        height: 6vh;
+    }
+
 </style>
 <body>
     <h1>Panzió Foglalás</h1>
@@ -33,28 +59,131 @@
         <div id="mainspace">
         <form action="index.html">
             <hr>
-            <p class="mezosor">
-                <p class="mezonev">Érkezés dátuma:</p>
-                <input type="date" name="erk" id="erkezes">
-            </p>
-            <p class="mezosor">
-                <p class="mezonev">Távozás dátuma:</p>
-                <input type="date" name="tav" id="tavozas">
-            </p>
+            <div class="mezosor">
+                <div class="mezonev">Érkezés dátuma:</div>
+                <div class="mezok">
+                    <input type="date" name="erk" id="erkezes">
+                </div>
+            </div>
+            <div class="mezosor">
+                <div class="mezonev">Távozás dátuma:</div>
+                <div class="mezok">
+                    <input type="date" name="tav" id="tavozas">
+                </div>
+            </div>
 
             <hr>
 
-            <p class="mezosor">
-                <p class="mezonev">Szoba típusa: </p>              
-                <input type="radio" name="egyagy" id="egyagyas">
-                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
-                <input type="radio" name="ketagy1" id="ketagyas1">
-                <label for="ketagy1">Egyágyas - 9000Ft/éj</label>
-            </p>
+            <div class="mezosor">
+                <div class="mezonev">Szoba típusa: </div>  
+                <div class="mezok"> 
+                        <div class="radiok">
+                            <input type="radio" name="egyagy" id="egyagyas">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                        <div class="radiok">
+                            <input type="radio" name="ketagy" id="ketagyas">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                        <div class="radiok">
+                            <input type="radio" name="ketagy1pot" id="ketagy1potagy">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                        <div class="radiok">
+                            <input type="radio" name="ketagy2pot" id="ketagy2potagy">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                    </div> 
+                </div>
+
+            <hr>
+
+            <div class="mezosor">
+                <div class="mezonev">Vendégek száma:</div>
+                <div class="mezok">
+                    <input type="number" name="vszam" id="vendegszam">
+                    <label for="vszam">fő</label>
+                </div>
+            </div>
+            <div class="mezosor">
+                <div class="mezonev">Vendégek életkora:</div>
+                <div class="mezok">
+                    <input type="text" name="vkor1" class="vendegkor">
+                    <label for="vkor1">év</label>
+                    <input type="text" name="vkor2" class="vendegkor">
+                    <label for="vkor2">év</label>
+                    <input type="text" name="vkor3" class="vendegkor">
+                    <label for="vkor3">év</label>
+                    <input type="text" name="vkor4" class="vendegkor">
+                    <label for="vkor4">év</label>
+                </div>
+            </div>
+
+            <hr>
+            
+            <div class="mezosor">
+                <div class="mezonev">Ellátás: </div>  
+                <div class="mezok"> 
+                        <div class="radiok">
+                            <input type="radio" name="reggeli" id="reggeli">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                        <div class="radiok">
+                            <input type="radio" name="felp" id="felpanzio">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                        <div class="radiok">
+                            <input type="radio" name="teljpanz" id="teljespanzio">
+                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                        </div>
+                    </div> 
+                </div>
+
+                <hr>
+
+                <div class="mezosor">
+                    <div class="mezonev">Ellátás: </div>  
+                    <div class="mezok"> 
+                            <div class="radiok">
+                                <input type="checkbox" name="belmed" id="belterimedence">
+                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            </div>
+                            <div class="radiok">
+                                <input type="checkbox" name="kulmed" id="kulterimedence">
+                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            </div>
+                            <div class="radiok">
+                                <input type="checkbox" name="szau" id="szauna">
+                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            </div>
+                            <div class="radiok">
+                                <input type="checkbox" name="teljbelepo" id="teljesbelepo">
+                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <hr>
+
+                    <div class="mezosor">
+                        <div class="mezonev">Egyéb kérés, kívánság:</div>
+                        <div class="mezok">
+                            <input type="textarea" name="kivan" id="kivansag">
+                        </div>
+                    </div>
+
+
+                    <hr>
+
+
+            </div>
 
 
         </form>
+
     </div>
+
+    <button onclick="Kalkulacio()">Költségkalkuláció</button>
     </div>
 
 
