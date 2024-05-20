@@ -10,11 +10,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: rgb(0, 0, 255);
     }
     #main{
         
-        width: 600px;
-        background-color: rgb(219, 219, 219);
+        width: 700px;
+        background-color: rgb(240, 240, 240);
     }
 
     #mainspace{
@@ -25,7 +26,15 @@
 
 
     .mezok{
-        margin-left: auto;
+        margin-bottom: 1vh;
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+
+    .mezonev{
+        width: 45%;
+        max-width: 200px;
     }
 
 
@@ -38,22 +47,37 @@
 
     .radiok{
         display: block;
+        margin-bottom: 0.2vh;
     }
     label{
         display: inline;
     }
 
     .vendegkor{
-        width: 3vh;
+        width: 5vh;
     }
 
     #kivansag{
-        height: 6vh;
+        width: 95%;
+        min-width: 95%;
+        max-width: 95%;
+        align-self: flex-start;
+
+    }
+
+    #vendegszam{
+        width: 5vh;
+    }
+
+    button{
+        margin: 2vh;
+        width: max-content;
+        height: 3vh;
     }
 
 </style>
 <body>
-    <h1>Panzió Foglalás</h1>
+    <h1>Panzió - szobaoglalás</h1>
 
     <div id="main">
         <div id="mainspace">
@@ -78,20 +102,20 @@
                 <div class="mezonev">Szoba típusa: </div>  
                 <div class="mezok"> 
                         <div class="radiok">
-                            <input type="radio" name="egyagy" id="egyagyas">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad2" id="egyagyas">
+                            <label for="egyagy">Egyágyas - 9000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="ketagy" id="ketagyas">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad2" id="ketagyas">
+                            <label for="egyagy">Kétágyas - 15000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="ketagy1pot" id="ketagy1potagy">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad2" id="ketagy1potagy">
+                            <label for="egyagy">Kétágyas 1 pótággyal - 18000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="ketagy2pot" id="ketagy2potagy">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad2" id="ketagy2potagy">
+                            <label for="egyagy">Kétágyas 2 pótággyal - 21000 Ft/éj</label>
                         </div>
                     </div> 
                 </div>
@@ -101,13 +125,14 @@
             <div class="mezosor">
                 <div class="mezonev">Vendégek száma:</div>
                 <div class="mezok">
-                    <input type="number" name="vszam" id="vendegszam">
+                    <input type="number" name="vszam" id="vendegszam" min="1" placeholder="1">
                     <label for="vszam">fő</label>
                 </div>
             </div>
             <div class="mezosor">
                 <div class="mezonev">Vendégek életkora:</div>
                 <div class="mezok">
+                    <div class="eletkorok"></div>
                     <input type="text" name="vkor1" class="vendegkor">
                     <label for="vkor1">év</label>
                     <input type="text" name="vkor2" class="vendegkor">
@@ -125,16 +150,16 @@
                 <div class="mezonev">Ellátás: </div>  
                 <div class="mezok"> 
                         <div class="radiok">
-                            <input type="radio" name="reggeli" id="reggeli">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad" id="reggeli">
+                            <label for="egyagy">Reggeli - 900 Ft/nap/fő</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="felp" id="felpanzio">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad" id="felpanzio">
+                            <label for="egyagy">Félpanzió - 2100 Ft/nap/fő</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="teljpanz" id="teljespanzio">
-                            <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                            <input type="radio" name="rad" id="teljespanzio">
+                            <label for="egyagy">Teljes Panzió - 4900 Ft/nap/fő</label>
                         </div>
                     </div> 
                 </div>
@@ -146,19 +171,19 @@
                     <div class="mezok"> 
                             <div class="radiok">
                                 <input type="checkbox" name="belmed" id="belterimedence">
-                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                                <label for="egyagy">Beltéri medencék - 800 Ft/nap/fő</label>
                             </div>
                             <div class="radiok">
                                 <input type="checkbox" name="kulmed" id="kulterimedence">
-                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                                <label for="egyagy">Kültéri medencék - 800 Ft/nap/fő</label>
                             </div>
                             <div class="radiok">
                                 <input type="checkbox" name="szau" id="szauna">
-                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                                <label for="egyagy">Szauna belépő - 800 Ft/nap/fő</label>
                             </div>
                             <div class="radiok">
                                 <input type="checkbox" name="teljbelepo" id="teljesbelepo">
-                                <label for="egyagy">Egyágyas - 9000Ft/éj</label>
+                                <label for="egyagy">Teljes belépő - 2000 Ft/nap/fő</label>
                             </div>
                         </div> 
                     </div>
@@ -168,7 +193,7 @@
                     <div class="mezosor">
                         <div class="mezonev">Egyéb kérés, kívánság:</div>
                         <div class="mezok">
-                            <input type="textarea" name="kivan" id="kivansag">
+                            <textarea name="kivan" id="kivansag" rows="7" cols="20" maxlength="500"></textarea>
                         </div>
                     </div>
 
