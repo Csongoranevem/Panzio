@@ -101,18 +101,18 @@
 
     <div id="main">
         <div id="mainspace">
-        <form action="index.html">
+        <form action="index.html" onsubmit="Kalkulacio()">
             <hr>
             <div class="mezosor">
                 <div class="mezonev">Érkezés dátuma:</div>
                 <div class="mezok">
-                    <input type="date" name="erk" value="2024-05-21" id="erkezes">
+                    <input type="date" name="erk" value="" id="erkezes" required>
                 </div>
             </div>
             <div class="mezosor">
                 <div class="mezonev">Távozás dátuma:</div>
                 <div class="mezok">
-                    <input type="date" name="tav" value="2024-05-21" id="tavozas">
+                    <input type="date" name="tav" value="" id="tavozas" required>
                 </div>
             </div>
 
@@ -122,19 +122,19 @@
                 <div class="mezonev">Szoba típusa: </div>  
                 <div class="mezok"> 
                         <div class="radiok">
-                            <input type="radio" name="rad2" id="9000" value="Egyágyas - 9000 Ft/éj">
+                            <input type="radio" name="rad2" id="9000" value="Egyágyas - 9000 Ft/éj" required>
                             <label for="egyagy">Egyágyas - 9000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="rad2" id="15000" value="Kétágyas - 15000 Ft/éj">
+                            <input type="radio" name="rad2" id="15000" value="Kétágyas - 15000 Ft/éj" required>
                             <label for="egyagy">Kétágyas - 15000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="rad2" id="18000" value="Kétágyas 1 pótággyal - 18000 Ft/éj">
+                            <input type="radio" name="rad2" id="18000" value="Kétágyas 1 pótággyal - 18000 Ft/éj" required>
                             <label for="egyagy">Kétágyas 1 pótággyal - 18000 Ft/éj</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="rad2" id="21000" value="Kétágyas 2 pótággyal - 21000 Ft/éj">
+                            <input type="radio" name="rad2" id="21000" value="Kétágyas 2 pótággyal - 21000 Ft/éj" required>
                             <label for="egyagy">Kétágyas 2 pótággyal - 21000 Ft/éj</label>
                         </div>
                     </div> 
@@ -145,7 +145,7 @@
             <div class="mezosor">
                 <div class="mezonev">Vendégek száma:</div>
                 <div class="mezok">
-                    <input type="number" name="vszam" id="vendegszam" min="1" max="4" placeholder="1">
+                    <input type="number" name="vszam" id="vendegszam" min="1" max="4" placeholder="1" required>
                     <label for="vszam">fő</label>
                 </div>
             </div>
@@ -153,13 +153,13 @@
                 <div class="mezonev">Vendégek életkora:</div>
                 <div class="mezok">
                     <div class="eletkorok"></div>
-                    <input type="text" name="vkor1" class="vendegkor">
+                    <input type="text" name="vkor1" class="vendegkor" required>
                     <label for="vkor1">év</label>
-                    <input type="text" name="vkor2" class="vendegkor">
+                    <input type="text" name="vkor2" class="vendegkor" required>
                     <label for="vkor2">év</label>
-                    <input type="text" name="vkor3" class="vendegkor">
+                    <input type="text" name="vkor3" class="vendegkor" required>
                     <label for="vkor3">év</label>
-                    <input type="text" name="vkor4" class="vendegkor">
+                    <input type="text" name="vkor4" class="vendegkor" required>
                     <label for="vkor4">év</label>
                 </div>
             </div>
@@ -170,15 +170,15 @@
                 <div class="mezonev">Ellátás: </div>  
                 <div class="mezok"> 
                         <div class="radiok">
-                            <input type="radio" name="rad" id="900" value="Reggeli - 900 Ft/nap/fő">
+                            <input type="radio" name="rad" id="900" value="Reggeli - 900 Ft/nap/fő" required>
                             <label for="egyagy">Reggeli - 900 Ft/nap/fő</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="rad" id="2100" value="Félpanzió - 2100 Ft/nap/fő">
+                            <input type="radio" name="rad" id="2100" value="Félpanzió - 2100 Ft/nap/fő" required>
                             <label for="egyagy">Félpanzió - 2100 Ft/nap/fő</label>
                         </div>
                         <div class="radiok">
-                            <input type="radio" name="rad" id="4900" value="Teljes Panzió - 4900 Ft/nap/fő">
+                            <input type="radio" name="rad" id="4900" value="Teljes Panzió - 4900 Ft/nap/fő" required>
                             <label for="egyagy">Teljes Panzió - 4900 Ft/nap/fő</label>
                         </div>
                     </div> 
@@ -223,12 +223,12 @@
 
             </div>
 
-
+            <button type="submit" >Költségkalkuláció</button>
         </form>
 
     </div>
 
-    <button onclick="Kalkulacio()">Költségkalkuláció</button>
+    
     </div>
 
 
