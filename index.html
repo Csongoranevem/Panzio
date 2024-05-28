@@ -70,7 +70,9 @@
     }
 
     button{
-        margin: 2vh;
+
+        text-align: center;
+        margin: 1vh;
         width: max-content;
         height: 3vh;
     }
@@ -81,7 +83,7 @@
         margin: 0 auto;
     }
     #main{
-        width: 360px;
+        width: 340px;
     }
 
     .vendegkor{
@@ -145,7 +147,7 @@
             <div class="mezosor">
                 <div class="mezonev">Vendégek száma:</div>
                 <div class="mezok">
-                    <input type="number" name="vszam" id="vendegszam" min="1" max="4" placeholder="1" required>
+                    <input type="number" name="vszam" id="vendegszam" min="1" max="4" placeholder="1" required onchange="VszamCsok()">
                     <label for="vszam">fő</label>
                 </div>
             </div>
@@ -153,13 +155,13 @@
                 <div class="mezonev">Vendégek életkora:</div>
                 <div class="mezok">
                     <div class="eletkorok"></div>
-                    <input type="text" name="vkor1" class="vendegkor" required>
+                    <input type="number" id="vkor1" class="vendegkor" min="1" max="100" required>
                     <label for="vkor1">év</label>
-                    <input type="text" name="vkor2" class="vendegkor" required>
+                    <input type="number" id="vkor2" class="vendegkor" min="1" max="100" required>
                     <label for="vkor2">év</label>
-                    <input type="text" name="vkor3" class="vendegkor" required>
+                    <input type="number" id="vkor3" class="vendegkor" min="1" max="100" required>
                     <label for="vkor3">év</label>
-                    <input type="text" name="vkor4" class="vendegkor" required>
+                    <input type="number" id="vkor4" class="vendegkor" min="1" max="100" required>
                     <label for="vkor4">év</label>
                 </div>
             </div>
@@ -222,8 +224,9 @@
 
 
             </div>
-
+            <center>
             <button type="submit" >Költségkalkuláció</button>
+            </center>
         </form>
 
     </div>

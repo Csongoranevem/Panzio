@@ -1,4 +1,48 @@
 
+function VszamCsok() {
+    let vendegsz=document.getElementById("vendegszam").value
+    let v1=document.getElementsByClassName("vendegkor");
+
+
+
+
+    if(vendegsz==1){
+        v1[0].disabled=false
+        v1[1].disabled=true
+        v1[1].value=null
+        v1[2].disabled=true
+        v1[2].value=null
+        v1[3].disabled=true
+        v1[3].value=null
+    }
+    else if(vendegsz==2){
+        v1[0].disabled=false
+        v1[1].disabled=false
+        v1[2].disabled=true
+        v1[2].value=null
+        v1[3].disabled=true
+        v1[3].value=null
+    }
+    else if(vendegsz==3){
+        v1[0].disabled=false
+        v1[1].disabled=false
+        v1[2].disabled=false
+        v1[3].disabled=true
+        v1[3].value=null
+        
+    }
+    else{
+        v1[0].disabled=false
+        v1[1].disabled=false
+        v1[2].disabled=false
+        v1[3].disabled=false
+
+    }
+
+
+}
+
+
 
 function Kalkulacio() {
 
@@ -21,6 +65,7 @@ function Kalkulacio() {
         }
         
     }
+
     let ellatasK = document.getElementsByName("rad");
     let ellatas;
     for (let i = 0; i < ellatasK.length; i++) {
@@ -53,15 +98,15 @@ function Kalkulacio() {
                     szolgfull +="\n"+szolgaltatas
                 }
 
+                if (szolgfull==""){
+                    szolgfull+="\n Nincs"
+                }
+
             }
 
 
 
         }
-        
-        
-    
-
 
     let osszeg = szobaosszeg+((ellatasosszeg+szolgaltosszeg)*vendegsz*idotartam)
     console.log(osszeg)
