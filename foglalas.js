@@ -108,8 +108,7 @@ function Kalkulacio() {
 
         }
 
-    let osszeg = szobaosszeg+((ellatasosszeg+szolgaltosszeg)*vendegsz*idotartam)
-    console.log(osszeg)
+    let osszeg = szobaosszeg*idotartam+((ellatasosszeg+szolgaltosszeg)*vendegsz*idotartam)
     
             //Kiiras
             alert(
